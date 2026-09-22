@@ -1,0 +1,65 @@
+{
+  "pages": [
+    {
+      "page": "about-mags.html",
+      "images": 7,
+      "links": 8,
+      "title": "\n   About Maggie Chang\n  "
+    },
+    {
+      "page": "claim-system.html",
+      "images": 12,
+      "links": 8,
+      "title": "\n   Claim System for E-Bike dealer\n  "
+    },
+    {
+      "page": "contact.html",
+      "images": 1,
+      "links": 9,
+      "title": "\n   Contact\n  "
+    },
+    {
+      "page": "dealer-ai-agent.html",
+      "images": 0,
+      "links": 2,
+      "title": "\n   Dealer AI Agent\n  "
+    },
+    {
+      "page": "flex.html",
+      "images": 1,
+      "links": 11,
+      "title": "\n   Hyena Flex | Product Strategy & Launch \u2014 Maggie Chang\n  "
+    },
+    {
+      "page": "hra.html",
+      "images": 17,
+      "links": 13,
+      "title": "\n   E-Bike Rider Assistant Tool\n  "
+    },
+    {
+      "page": "hyena-factory-tool-system.html",
+      "images": 8,
+      "links": 8,
+      "title": "\n   Hyena Factory Tool System\n  "
+    },
+    {
+      "page": "illustration.html",
+      "images": 15,
+      "links": 9,
+      "title": "\n   Illustration\n  "
+    },
+    {
+      "page": "index.html",
+      "images": 2,
+      "links": 14,
+      "title": "\n   Maggie Chang Portfolio\n  "
+    },
+    {
+      "page": "tuning-tool.html",
+      "images": 7,
+      "links": 8,
+      "title": "\n   Tuning Tool\n  "
+    }
+  ],
+  "errors": []
+}

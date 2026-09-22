@@ -1,0 +1,12 @@
+{
+  "folders": [{ "name": "Maggie Portfolio", "path": "." }],
+  "settings": {
+    "editor.wordWrap": "on",
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true,
+    "[html]": { "editor.defaultFormatter": "vscode.html-language-features" },
+    "[css]": { "editor.defaultFormatter": "vscode.css-language-features" },
+    "files.exclude": { "**/.DS_Store": true },
+    "search.exclude": { "assets/**": true, "asset-manifest.json": true }
+  }
+}
