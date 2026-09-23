@@ -481,7 +481,33 @@ body>main{
                                                                                                                                                                                                                                                                       animation-duration:.01ms!important;
                                                                                                                                                                                                                                                                       transition-duration:.01ms!important}
                                                                                                                                                                                                                                                                     }
+.case-content h3#strategy,
+.case-content h3#prioritization{
+  margin-top:40px}
 .pm-design-section{
   max-width:1440px;
   margin-left:auto;
   margin-right:auto}
+
+/* Match the launch result heading to the case-study section grid. */
+.launch-band .case-wide{
+  display:grid;
+  grid-template-columns:215px minmax(0,1fr);
+  gap:45px;
+  padding-left:0}
+.launch-band .case-eyebrow{
+  align-self:start;
+  margin:0;
+  padding-top:9px}
+.launch-band .launch-content h2{
+  margin-top:0}
+@media(max-width:991px){
+  .launch-band .case-wide{
+    grid-template-columns:150px minmax(0,1fr);
+    gap:28px}}
+@media(max-width:767px){
+  .launch-band .case-wide{
+    display:block}
+  .launch-band .case-eyebrow{
+    margin-bottom:20px;
+    padding-top:0}}
