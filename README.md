@@ -11,7 +11,7 @@
 - 首頁：保留六個 PM／Design 專案，更新 PM 定位和 Flex 上線資訊。
 - Flex：重寫為 Hero、Overview、Challenge、My Role、Product Strategy、Prioritization Framework、Key Decisions、Execution、Launch Result、Post-launch Learnings、Iterations、Impact。
 - 原樣搬移：HRA、Claim System、E-Bike Tuning Tool、Factory System Tool、Illustration、About、Contact。
-- Dealer AI Agent：原站目前只有 Coming Soon，照原站保留。
+- Dealer AI Agent：依專案對話建立 AI 產品探索案例，沿用 Flex 版型，包含 Demo、可信度問題與產品化方向；四個圖片位置待補。
 - 未搬移：Industrial Design 專案區、相關四個工業設計專案頁、隱藏的 PhysioQ。About 中的職涯經歷文字保留。
 
 Flex 使用原站產品圖和可編輯的流程、優先順序對照、時間軸；沒有以 AI 圖片假裝真實產品成果。已上線／下一版／持續規劃分開標示，沒有新增未提供的成長數據。

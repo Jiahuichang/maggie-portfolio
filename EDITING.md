@@ -9,7 +9,7 @@
 | 首頁自介、專案卡片 | `index.html` |
 | Flex 文案、上線狀態、規劃項目 | `flex.html` |
 | Rider Assistant | `hra.html` |
-| Dealer AI 的 Coming Soon | `dealer-ai-agent.html` |
+| Dealer AI 案例文案與圖片 | `dealer-ai-agent.html` |
 | Claim System | `claim-system.html` |
 | Tuning Tool | `tuning-tool.html` |
 | Factory System Tool | `hyena-factory-tool-system.html` |
@@ -32,6 +32,12 @@
 ```
 
 `h1` 是頁面大標題、`h2` 是章節標題、`h3` 是小標題、`p` 是內文、`li` 是清單項目。`class` 與 `id` 先保留，避免樣式或章節跳轉失效。
+
+## Dealer AI 補圖片
+
+在 `dealer-ai-agent.html` 搜尋 `image-cover`、`image-demo`、`image-report`、`image-trust`，分別對應封面、Demo 流程、報表、回應檢視四個位置。將圖片放進 `assets`，把該 figure 內整個 `dealer-image-placeholder` div 換成 `<img src="assets/你的圖片.webp" alt="描述圖片內容" loading="lazy"/>`，並更新下方 figcaption。封面可省略 loading 屬性。圖片會自動符合頁面寬度。
+
+Dealer AI 的 60 間車店試用、MCP 與 Portal 整合目前以提案呈現；若後續已有成果，可再更新對應文字。
 
 ## 改狀態
 
