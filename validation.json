@@ -4,25 +4,25 @@
       "page": "about-mags.html",
       "images": 7,
       "links": 8,
-      "title": "\n   About Maggie Chang\n  "
+      "title": "\n    About Maggie Chang\n  "
     },
     {
       "page": "claim-system.html",
-      "images": 12,
-      "links": 8,
-      "title": "\n   Claim System for E-Bike dealer\n  "
+      "images": 5,
+      "links": 14,
+      "title": "\n   Claim System \u2014 E-Bike After-Sales Platform | Maggie Chang\n  "
     },
     {
       "page": "contact.html",
       "images": 1,
       "links": 9,
-      "title": "\n   Contact\n  "
+      "title": "\n    Contact\n  "
     },
     {
       "page": "dealer-ai-agent.html",
-      "images": 0,
-      "links": 2,
-      "title": "\n   Dealer AI Agent\n  "
+      "images": 2,
+      "links": 10,
+      "title": "\n   Dealer AI Agent | AI Product Discovery \u2014 Maggie Chang\n  "
     },
     {
       "page": "flex.html",
@@ -32,9 +32,9 @@
     },
     {
       "page": "hra.html",
-      "images": 17,
-      "links": 13,
-      "title": "\n   E-Bike Rider Assistant Tool\n  "
+      "images": 9,
+      "links": 16,
+      "title": "\n   HRA \u00b7 Product Reliability | Maggie Chang\n  "
     },
     {
       "page": "hyena-factory-tool-system.html",
@@ -46,7 +46,7 @@
       "page": "illustration.html",
       "images": 15,
       "links": 9,
-      "title": "\n   Illustration\n  "
+      "title": "\n    Illustration\n  "
     },
     {
       "page": "index.html",
@@ -56,9 +56,9 @@
     },
     {
       "page": "tuning-tool.html",
-      "images": 7,
-      "links": 8,
-      "title": "\n   Tuning Tool\n  "
+      "images": 8,
+      "links": 22,
+      "title": "\n   E-Bike Tuner \u2014 Product Design | Maggie Chang\n  "
     }
   ],
   "errors": []

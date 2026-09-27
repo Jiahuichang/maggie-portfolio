@@ -1,0 +1,37 @@
+.claim-case .claim-cover { background:#f0f3ed; padding:24px; }
+.claim-case .claim-cover img,.claim-case .claim-screen { display:block; width:100%; height:auto; }
+.claim-case .claim-form-full { position:relative; margin:0; background:#fff; box-shadow:0 6px 20px #00000014; }
+.claim-case .claim-form-full img { display:block; width:100%; height:auto; }
+.claim-case .claim-form-account-mask { position:absolute; left:2.7%; top:7.9%; width:8.2%; height:2.1%; margin:0; background:#111; color:#d7e1dc; font-size:clamp(3px,.7vw,10px); line-height:1.1; }
+.claim-case .claim-callouts { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; margin-top:28px; }
+.claim-case .claim-callouts span { font-size:11px; letter-spacing:.08em; color:#45644b; }
+.claim-case .claim-callouts h4,.claim-case .claim-test-grid h4 { font-size:18px; line-height:1.4; margin:12px 0; }
+.claim-case .claim-callouts p,.claim-case .claim-test-grid p { font-size:14px; line-height:1.7; margin:0; }
+.claim-case .claim-test-grid { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+.claim-case .claim-test-grid article { padding:24px; background:white; border-top:3px solid #4f7359; }
+@media(max-width:767px) {
+ .claim-case .claim-cover { padding:12px; }
+ .claim-case .claim-callouts,.claim-case .claim-test-grid { grid-template-columns:1fr; }
+ .claim-case .claim-callouts { gap:20px; }
+}
+.claim-case .claim-old-flow { grid-template-columns:repeat(4,minmax(0,1fr)); }
+.claim-case .scope-grid { margin-bottom:40px; }
+.claim-case .scope-grid ul { padding-left:18px; margin:16px 0 0; }
+@media(max-width:991px) and (min-width:768px) {
+ .claim-case .claim-old-flow { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+@media(max-width:767px) {
+ .claim-case .claim-old-flow { grid-template-columns:1fr; }
+}
+.claim-case .case-content blockquote { margin-bottom:28px; }
+.claim-case .claim-cover { padding:0; background:transparent; }
+.claim-cover-photo { position:relative; }
+.claim-case .claim-order-focus { position:relative; aspect-ratio:1576/1030; overflow:hidden; }
+.claim-case .claim-order-focus img { position:absolute; width:116.25%; max-width:none; height:auto; left:-16.25%; top:0; }
+.claim-case .claim-flow { margin:28px 0 18px; }
+@media(max-width:767px) {
+ .claim-case .claim-flow { grid-template-columns:1fr; }
+ .claim-case .claim-flow li { border-right:0; border-bottom:1px solid #ced9c7; padding:24px; }
+ .claim-case .claim-flow li:last-child { border-bottom:0; }
+ .claim-case .claim-flow li:not(:last-child):after { content:'↓'; display:block; top:auto; right:24px; bottom:-14px; padding:0 6px; }
+}
