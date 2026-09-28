@@ -50,7 +50,17 @@
 .tuner-three span { display:block; font-size:14px; line-height:1.6; color:#525a50; }
 
 /* Connected clockwise cycle with a confirmation branch. */
-.tuner-cycle { background:#edf2e8; padding:20px; border-radius:4px; }
-.tuner-cycle-map { display:block; width:100%; height:auto; max-width:800px; margin:auto; }
+.tuner-cycle { background:#edf2e8; padding:12px; border-radius:4px; }
+.tuner-cycle-map { display:block; width:100%; height:auto; max-width:520px; margin:auto; }
 .tuner-field-illustration img { box-sizing:border-box; padding:5% 7%; background:#fff; }
 @media(max-width:600px) { .tuner-cycle { padding:6px; } .tuner-field-illustration img { padding:3%; } }
+
+.tuner-context-pair { display:grid; grid-template-columns:1fr 1fr; gap:24px; margin:32px 0; align-items:start; }
+.tuner-context-pair .tuner-evidence { margin:0; min-width:0; }
+.tuner-context-pair figcaption { text-align:left; }
+.tuner-context-pair figcaption strong { display:block; color:#263f2d; font-size:16px; margin-bottom:4px; }
+.tuner-outdoor-crop,.tuner-office-frame { height:280px; overflow:hidden; position:relative; background:white; }
+.tuner-context-pair .tuner-outdoor-crop img { position:absolute; height:100%; width:auto; max-width:none; right:0; padding:0; }
+.tuner-context-pair .tuner-office-frame img { height:100%; width:100%; object-fit:contain; padding:0; }
+@media(max-width:600px) { .tuner-context-pair { grid-template-columns:1fr; } .tuner-outdoor-crop { width:280px; max-width:100%; margin:auto; } }
+.tuner-outdoor-crop { width:280px; max-width:100%; margin:auto; }
