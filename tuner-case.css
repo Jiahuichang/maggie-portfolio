@@ -11,11 +11,6 @@
 .tuner-baseline strong { font-size:32px; line-height:1.3; }
 .tuner-baseline p { font-size:16px; line-height:1.6; margin:8px 0 0; max-width:550px; }
 .tuner-diagram { margin:32px 0; background:#f0f2ec; padding:30px; border-radius:6px; }
-.tuner-flow { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:25px; padding:0; list-style:none; margin:24px 0; }
-.tuner-flow li { position:relative; }
-.tuner-flow li:not(:last-child)::after { content:'→'; position:absolute; right:-19px; top:0; color:#567956; }
-.tuner-flow b,.tuner-three b { display:block; font-size:17px; margin-bottom:8px; }
-.tuner-flow span,.tuner-three span { display:block; font-size:14px; line-height:1.6; color:#525a50; }
 .tuner-compare { display:grid; grid-template-columns:1fr 1fr; margin:30px 0; border:1px solid #d4dace; border-radius:6px; overflow:hidden; }
 .tuner-compare article { padding:30px; }
 .tuner-compare article+article { background:#eaf0e5; }
@@ -27,8 +22,6 @@
 @media(max-width:600px) {
  .tuner-cover img { height:420px; }
  .tuner-metrics,.tuner-compare,.tuner-three { grid-template-columns:1fr; }
- .tuner-flow { grid-template-columns:1fr; gap:30px; }
- .tuner-flow li:not(:last-child)::after { content:'↓'; top:auto; bottom:-26px; left:0; right:auto; }
  .tuner-diagram,.tuner-compare article { padding:24px; }
  .tuner-metrics strong { font-size:32px; }
  .tuner-baseline strong { font-size:28px; }
@@ -49,3 +42,15 @@
  .tuner-case .tuner-impact .tuner-metrics { grid-template-columns:1fr; }
 }
 @media (max-width:600px) { .tuner-photo-pair { grid-template-columns:1fr; gap:0; } }
+
+.tuner-workflow { margin:32px 0; }
+.tuner-workflow .ride-loop { margin-top:20px; }
+.tuner-workflow figcaption { color:#626861; font-size:13px; line-height:1.6; margin-top:12px; text-align:left; }
+.tuner-three b { display:block; font-size:17px; margin-bottom:8px; }
+.tuner-three span { display:block; font-size:14px; line-height:1.6; color:#525a50; }
+
+/* Connected clockwise cycle with a confirmation branch. */
+.tuner-cycle { background:#edf2e8; padding:20px; border-radius:4px; }
+.tuner-cycle-map { display:block; width:100%; height:auto; max-width:800px; margin:auto; }
+.tuner-field-illustration img { box-sizing:border-box; padding:5% 7%; background:#fff; }
+@media(max-width:600px) { .tuner-cycle { padding:6px; } .tuner-field-illustration img { padding:3%; } }

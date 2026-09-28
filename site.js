@@ -14,3 +14,22 @@ document.querySelectorAll('.w-nav').forEach(header => {
   document.addEventListener('click', event => { if(!header.contains(event.target)) close(); });
   window.addEventListener('resize', () => { if(window.innerWidth > 991) close(); });
 });
+
+// Disable ordinary image saving gestures; public image URLs remain accessible.
+document.querySelectorAll('img').forEach(image => {
+  image.draggable = false;
+  image.style.webkitTouchCallout = 'none';
+});
+const isImageTarget = target => {
+  if (!(target instanceof Element)) return false;
+  if (target.closest('img, picture')) return true;
+  for (let element = target; element && element !== document.body; element = element.parentElement) {
+    if (getComputedStyle(element).backgroundImage.includes('url(')) return true;
+  }
+  return false;
+};
+['contextmenu', 'dragstart'].forEach(type => {
+  document.addEventListener(type, event => {
+    if (isImageTarget(event.target)) event.preventDefault();
+  });
+});

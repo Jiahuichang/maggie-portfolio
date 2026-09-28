@@ -15,7 +15,7 @@
   <link href="https://maggie-chang.com/claim-system" rel="canonical"/>
   <link href="assets/c40bc631bc196a74.css" rel="stylesheet"/>
   <link href="portfolio.css" rel="stylesheet"/>
-  <link href="claim-case.css" rel="stylesheet"/>
+  <link href="claim-case.css?v=20260928-evidence" rel="stylesheet"/>
  </head>
  <body class="body-8">
   <a class="skip-link" href="#main-content">
@@ -117,7 +117,7 @@
      <p>Order supports replacement-parts purchases, including cases outside warranty coverage. I specified the purchase flow, payment states, and review actions so dealers and the service team could follow each order through payment and shipment.</p>
      <p>With the reworked purchase process, payment success rose from <strong>63% to 92%</strong>.</p>
      <figure class="hra-visual"><h3>Order status, parts, and next actions on one screen.</h3><div class="claim-order-focus"><img src="assets/9a453c585d4f5e82.webp" alt="Order Management content showing status, parts, costs, and review actions." loading="lazy"/></div><div class="claim-callouts"><article><span>STATUS</span><h4>Where the order stands</h4><p>Current status and progress sit with the order.</p></article><article><span>CONTEXT</span><h4>What is being bought</h4><p>Parts and costs stay visible during review.</p></article><article><span>ACTION</span><h4>What happens next</h4><p>Approve, return for revision, reject, or cancel.</p></article></div></figure>
-     <details class="hra-source-detail"><summary>View the order state specification</summary><figure class="hra-evidence"><a href="assets/0227cf8b0134a0af.webp" target="_blank" rel="noopener"><img src="assets/0227cf8b0134a0af.webp" alt="Order state diagram: Pending, Revising, Unpaid with a payment-declined retry, Picking, Shipped, Completed, Rejected, and Cancelled." loading="lazy"/></a><figcaption>Order states, including the Unpaid step and the retry path after a declined payment.</figcaption></figure></details>
+     <details class="hra-source-detail"><summary>View the order state specification</summary><figure class="hra-evidence"><img src="assets/0227cf8b0134a0af.webp" alt="Order state diagram: Pending, Revising, Unpaid with a payment-declined retry, Picking, Shipped, Completed, Rejected, and Cancelled." loading="lazy"/><figcaption>Order states, including the Unpaid step and the retry path after a declined payment.</figcaption></figure></details>
     </div>
    </section>
    <section class="case-section" id="delivery">
@@ -125,7 +125,25 @@
      <h2>Coordinate the teams<br/>from specification to launch.</h2>
      <div class="decision-row"><span>01</span><div><h3>Align requirements across teams</h3><p>I worked with after-sales, software, and the external front-end team to clarify the required behavior and maintain a shared reference as development progressed.</p></div></div>
      <div class="decision-row"><span>02</span><div><h3>Write a spec an external team could build from</h3><p>I wrote the PRD with user stories, flows, state rules, and permissions, and split the delivery plan into dated milestones between our software team and the vendor. I followed up on implementation questions and progress throughout delivery.</p></div></div>
+
+     <div class="claim-delivery-evidence">
+      <h3>Turn the scope into dated handoffs.</h3>
+      <p>The delivery plan assigned API work to Hyena and front-end work to the vendor, with separate target dates for each part of the workflow.</p>
+      <div class="claim-milestones"><article><span>HYENA · NOV 14, 2023</span><h4>Case API</h4><p>Create an order and provide its details.</p></article><article><span>VENDOR · NOV 20, 2023</span><h4>Create actions</h4><p>Build the claim and purchase submission interfaces.</p></article><article><span>VENDOR · NOV 22, 2023</span><h4>Overview screens</h4><p>Build the claim and order overview interfaces.</p></article></div>
+      <figure class="claim-source-evidence"><img src="assets/33037bee7aaf0091.webp" alt="Original delivery plan listing functions, priorities, target dates, and Hyena or external-vendor ownership." loading="lazy" draggable="false"/><figcaption>Original delivery plan. The dates above are planned milestones, not verified completion dates.</figcaption></figure>
+     </div>
      <div class="decision-row"><span>03</span><div><h3>Test before QA to protect the date</h3><p>With limited QA capacity, I tested each release during development and logged issues in Notion so the team could address them earlier. During QA, I ran and recorded additional test cases in Testmo alongside the team to support release verification.</p></div></div>
+     <div class="claim-delivery-evidence">
+      <h3>Check the expected path—and the cases that should stop it.</h3>
+      <p>I recorded the starting conditions, user actions, expected behavior, and observed results. These examples show how the claim requirements became concrete checks during development.</p>
+      <div class="claim-test-examples">
+       <article><p class="case-eyebrow">01 / VALID FRAME NUMBER · TC 1-3-3-1</p><h4>Continue to the issue details</h4><dl><div><dt>Given</dt><dd>A dealer enters a frame number that exists in the database.</dd></div><div><dt>When</dt><dd>The dealer selects Confirm.</dd></div><div><dt>Expected</dt><dd>The app opens the Add Issue Parts page.</dd></div></dl><p class="claim-test-result">Recorded result: Pass · Same as expected.</p></article>
+       <article><p class="case-eyebrow">02 / UNKNOWN FRAME NUMBER · TC 1-3-3-2</p><h4>Stop an invalid submission</h4><dl><div><dt>Given</dt><dd>A dealer enters a frame number that does not exist in the database.</dd></div><div><dt>When</dt><dd>The dealer selects Confirm.</dd></div><div><dt>Expected</dt><dd>The app stays on the current page and displays an error message.</dd></div></dl><p class="claim-test-result">Recorded result: Pass · Same as expected.</p></article>
+       <article><p class="case-eyebrow">03 / DUPLICATE PART · TC 1-3-3-8</p><h4>Explain why a part cannot be added again</h4><dl><div><dt>Given</dt><dd>A dealer enters a part serial number already included in the form.</dd></div><div><dt>When</dt><dd>The dealer selects Add.</dd></div><div><dt>Expected</dt><dd>An error snackbar states: “This serial number already exists in the form.” It disappears after five seconds.</dd></div></dl><p class="claim-test-result">Recorded result: Pass · Same as expected.</p></article>
+      </div>
+      <figure class="claim-source-evidence"><img src="assets/d7d4c7c5c65e3e66.webp" alt="Original File a New Claim test cases, with positive and negative scenarios, conditions, actions, expected results, and recorded statuses." loading="lazy" draggable="false"/><figcaption>Development-stage test record. The examples above summarize selected rows; this is not a final release sign-off. Other rows include checks that could not yet be verified.</figcaption></figure>
+     </div>
+
     </div>
    </section>
    <section class="case-section case-impact" id="reflection">
@@ -147,7 +165,7 @@
     </div>
    </div>
   </div>
-  <script defer="" src="site.js">
+  <script defer="" src="site.js?v=20260928-images">
   </script>
  </body>
 </html>
