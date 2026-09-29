@@ -554,8 +554,8 @@ body>main{
   .dealer-case .dealer-image-placeholder strong { font-size: 21px; }
 }
 /* Keep the homepage Claim card aligned with the case-study cover. */
-.work_claim-web { background-image:url("assets/claim-workshop-cover-v2.png"); }
-.work_claim-web:hover { background-image:linear-gradient(#000c,#000c),url("assets/claim-workshop-cover-v2.png"); }
+.work_claim-web { background-image:url("assets/claim-workshop-cover-v2.webp"); }
+.work_claim-web:hover { background-image:linear-gradient(#000c,#000c),url("assets/claim-workshop-cover-v2.webp"); }
 /* HRA case study: shared Flex structure with evidence and platform results. */
 /* Source-based visual explanations, scoped to HRA. */
 .hra-case .hra-visual { margin:36px 0; padding:28px; background:#f0f3ed; border:1px solid #d6dfd1; border-radius:12px; }
@@ -872,3 +872,7 @@ b,strong{font-weight:800;}
   .pm-design-section .column-60,
   .pm-design-section .column-61 { height: auto; }
 }
+
+/* Factory card: a 1600px WebP is plenty for the card and lighter than the full-size conversion. */
+.work_fts { background-image: url("assets/factory-card-cover.webp"); }
+.work_fts:hover { background-image: linear-gradient(#000c,#000c), url("assets/factory-card-cover.webp"); }
