@@ -711,3 +711,164 @@ b,strong{font-weight:800;}
 .flex-app-badge img{display:block;width:180px;height:auto;}
 .flex-app-badge:focus-visible{outline:3px solid #276345;outline-offset:6px;border-radius:8px;}
 @media(max-width:767px){.flex-title-row{flex-direction:column;gap:24px;}.flex-app-badge{flex-basis:auto;align-self:flex-end;}}
+
+/* Mobile cards must contain both their cover and copy, without fixed row heights. */
+@media (max-width: 991px) {
+  .pm-design-section { gap: 36px; }
+  .pm-design-section > .section-49,
+  .pm-design-section > .section-50,
+  .pm-design-section > .section-51 {
+    height: auto;
+    margin: 0;
+    padding: 0;
+  }
+  .pm-design-section .columns-33 {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    gap: 36px;
+    margin: 0;
+  }
+  .pm-design-section .column-60,
+  .pm-design-section .column-61 {
+    float: none;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    margin: 0;
+    gap: 14px;
+  }
+  .pm-design-section .site-project-link {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 4 / 3;
+    flex: none;
+    margin: 0;
+  }
+  .pm-design-section .w-layout-blockcontainer {
+    position: static;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  body .w-nav-menu.menu-open {
+    max-height: calc(100dvh - 60px);
+    padding: 12px 5% 20px;
+  }
+  body .w-nav-menu.menu-open > .w-nav-link {
+    display: block;
+    float: none;
+    width: 100%;
+    height: auto;
+    min-height: 48px;
+    margin: 0;
+    padding: 14px 0;
+    text-align: left;
+    line-height: 24px;
+  }
+  body .w-nav-menu.menu-open .div-block-22 {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    height: auto;
+    margin: 12px 0 0;
+  }
+  body .w-nav-menu.menu-open .social-footer-link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 44px;
+    height: 44px;
+    margin: 0;
+  }
+  body .w-nav-menu.menu-open .image-178 { width: 24px; height: 24px; margin: 0; }
+}
+
+/* Keep the desktop social icon; mobile navigation uses the same text rhythm. */
+.nav-linkedin-label { display: none; }
+@media (max-width: 991px) {
+  body .w-nav-menu.menu-open .div-block-22 { margin: 0; }
+  body .w-nav-menu.menu-open .social-footer-link {
+    width: 100%;
+    height: auto;
+    min-height: 48px;
+    padding: 14px 0;
+    color: #aaa;
+    opacity: 1;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-decoration: none;
+  }
+  body .w-nav-menu.menu-open .social-footer-link:hover { color: #000; }
+  body .w-nav-menu.menu-open .image-178 { display: none; }
+  body .w-nav-menu.menu-open .nav-linkedin-label { display: inline; }
+}
+@media (max-width: 767px) {
+  body > .footer {
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    flex: none;
+    margin: 0;
+    padding: 32px 20px;
+  }
+  body > .footer > .container,
+  body > .footer .footer-bottom-wrapper {
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    height: auto;
+    margin: 0;
+    padding: 0;
+  }
+  body > .footer .small.footer-small {
+    width: 100%;
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.6;
+    text-align: center;
+  }
+  body > .footer .footer-small > span { display: block; }
+}
+
+/* Dealer AI: source screenshots. */
+.dealer-case .dealer-figure > a { display: block; border: 1px solid #e2e7e5; border-radius: 10px; overflow: hidden; }
+
+/* Homepage project role tags, tinted like the case-study flow panels. */
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  margin: 8px 0 6px;
+  padding: 0;
+  list-style: none;
+}
+.project-tags li {
+  margin: 0;
+  padding: 4px 10px;
+  border-radius: 4px;
+  background: #edf3e9;
+  color: #406447;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+@media (max-width: 991px) {
+  .project-tags { justify-content: flex-start; }
+}
+.project-tags li.tag-design {
+  background: #fbefd9;
+  color: #8a5b12;
+}
+/* Tags make the caption taller than the fixed 600px column; keep covers at full height. */
+@media (min-width: 992px) {
+  .pm-design-section .site-project-link { flex-shrink: 0; }
+  .pm-design-section .column-60,
+  .pm-design-section .column-61 { height: auto; }
+}

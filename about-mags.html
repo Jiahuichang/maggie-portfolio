@@ -21,23 +21,23 @@
   <link href="assets/b84e9e0a6c25ee1b.png" rel="apple-touch-icon" />
   <link href="https://maggie-chang.com/about-mags" rel="canonical" />
   <link href="assets/c40bc631bc196a74.css" rel="stylesheet" />
-  <link href="portfolio.css?v=manrope-weights-20260928" rel="stylesheet" />
+  <link href="portfolio.css?v=mobile-footer-20260929" rel="stylesheet" />
   <style>
     .about-page { max-width: 1120px; margin: 0 auto; padding: 72px 32px 80px; }
-    .about-page > section { width: 100%; max-width: none; margin: 0; padding: 48px 0; }
+    .about-page > section { width: 100%; max-width: none; margin: 0; padding: 28px 0; gap: 0; }
     .about-page .about-intro { padding-top: 24px; }
     .about-page h1 { font-size: clamp(36px, 5vw, 64px); line-height: 1.12; letter-spacing: -.035em; margin: 16px 0 28px; }
-    .about-page h2 { font-size: clamp(26px, 3vw, 36px); line-height: 1.25; margin: 0 0 24px; }
+    .about-page h2 { font-size: clamp(26px, 3vw, 36px); line-height: 1.25; margin: 0 0 20px; }
     .about-page h3 { font-size: 20px; line-height: 1.4; margin: 12px 0; }
     .about-page p { font-size: 17px; line-height: 1.75; max-width: 780px; margin: 0 0 20px; padding: 0; }
     .about-page .about-eyebrow { font-size: 12px; letter-spacing: .14em; font-weight: 700; }
     .about-page .about-lead { font-size: 23px; line-height: 1.6; }
-    .about-path, .about-traits { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; margin-top: 36px; }
+    .about-path, .about-traits { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; margin-top: 12px; }
     .about-path > div, .about-traits > article { border-top: 1px solid #ccc; padding-top: 20px; }
     .about-path span { font-size: 13px; color: #606060; }
     .about-page .about-path p, .about-page .about-traits p { font-size: 16px; }
     .about-traits a { color: inherit; text-decoration: underline; text-underline-offset: 4px; line-height: 1.6; }
-    .about-photo-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin-top: 28px; }
+    .about-photo-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin-top: 12px; }
     .about-photo-grid figure { margin: 0; min-width: 0; }
     .about-photo-grid img { display: block; width: 100%; height: auto; border-radius: 8px; }
     .about-photo-grid figcaption { padding-top: 8px; }
@@ -45,13 +45,25 @@
     .about-page .about-photo-grid p { font-size: 15px; margin-bottom: 0; }
     @media (max-width: 767px) {
       .about-page { padding: 32px 24px 48px; }
-      .about-page > section { padding: 32px 0; }
+      .about-page > section { padding: 24px 0; }
       .about-path, .about-traits { grid-template-columns: 1fr; gap: 20px; }
       .about-photo-grid { grid-template-columns: 1fr; gap: 32px; }
       .about-page .about-lead { font-size: 20px; }
     }
   </style>
   <link href="hero.css?v=20260929" rel="stylesheet" />
+  <style>
+    /* Use paragraph margins once, without the legacy section flex gaps. */
+    .about-page { padding-bottom: 16px; }
+    .about-page .about-intro { padding-bottom: 24px; }
+    .about-page > section > p:last-child { margin-bottom: 0; }
+    .about-page .about-path p { margin-bottom: 0; }
+    .about-page .about-traits { margin-top: 8px; }
+    .about-page + .footer { margin-top: 0; padding-top: 32px; padding-bottom: 32px; }
+    @media (max-width: 767px) {
+      .about-page { padding-bottom: 0; }
+    }
+  </style>
 </head>
 
 <body class="body-10">
@@ -96,7 +108,7 @@
               rel="noopener noreferrer" target="_blank">
               <img alt="LinkedIn" class="image-178" sizes="(max-width: 991px) 100vw, 30px"
                 src="assets/149cb0d4071b406a.webp"
-                srcset="assets/18dfb410992090e1.png 500w, assets/149cb0d4071b406a.webp 800w" width="30" />
+                srcset="assets/18dfb410992090e1.png 500w, assets/149cb0d4071b406a.webp 800w" width="30" /><span class="nav-linkedin-label">Linkedin</span>
             </a>
           </div>
         </nav>
@@ -160,7 +172,7 @@
     <div class="container">
       <div class="footer-bottom-wrapper">
         <div class="small footer-small">
-          © 2026, Maggie Chang. Made with all Maggie's heart !
+          <span>© 2026, Maggie Chang.</span> <span>Made with all Maggie's heart !</span>
         </div>
       </div>
     </div>

@@ -3,10 +3,37 @@ const submit = form.querySelector('button[type="submit"]');
 const status = document.querySelector('#contact-status');
 const success = document.querySelector('#contact-success');
 let sending = false;
+let validationAttempted = false;
+const fields = [...form.querySelectorAll('[required]')];
+const emptyMessages = new Map(fields.map(field => [field, document.querySelector(`#${field.id}-error`).textContent]));
+// Enable custom validation only after the controller is available.
+form.noValidate = true;
+const validateField = field => {
+  const error = document.querySelector(`#${field.id}-error`);
+  const empty = !field.value.trim();
+  const invalid = empty || !field.validity.valid;
+  error.textContent = empty ? emptyMessages.get(field)
+    : field.validity.typeMismatch ? 'Please enter a valid email address.'
+    : field.validationMessage;
+  error.hidden = !invalid;
+  if (invalid) field.setAttribute('aria-invalid', 'true');
+  else field.removeAttribute('aria-invalid');
+  return !invalid;
+};
+fields.forEach(field => field.addEventListener('input', () => {
+  if (validationAttempted) validateField(field);
+}));
 
 form.addEventListener('submit', async event => {
   event.preventDefault();
-  if (sending || !form.reportValidity()) return;
+  if (sending) return;
+  validationAttempted = true;
+  const results = fields.map(validateField);
+  if (results.includes(false)) {
+    status.textContent = '';
+    fields[results.indexOf(false)].focus();
+    return;
+  }
   sending = true;
   submit.disabled = true;
   submit.textContent = 'Sending…';
