@@ -1,0 +1,100 @@
+/* Shared hero geometry: title tops align across navigation and case-study pages. */
+:root {
+  --hero-top: 170px;
+  --hero-title-size: clamp(38px, 5vw, 64px);
+  --hero-title-spacing: -0.035em;
+}
+.page_title,
+.illustration-section,
+.case-hero,
+.contact-layout {
+  box-sizing: border-box;
+  position: relative;
+  width: 90%;
+  max-width: 1296px;
+  margin: 0 auto;
+  padding: var(--hero-top) 0 60px;
+}
+.about-page {
+  box-sizing: border-box;
+  width: 90%;
+  max-width: 1296px;
+  margin: 0 auto;
+  padding: 0 0 80px;
+}
+.about-page .about-intro {
+  position: relative;
+  margin: 0;
+  padding: var(--hero-top) 0 60px;
+}
+#About-Section.about-intro { margin-top: 0; }
+.page_title > h1,
+.illustration-section > h1,
+.about-page .about-intro > h1,
+.case-hero h1,
+.contact-intro > h1 {
+  height: auto;
+  width: 100%;
+  font-size: var(--hero-title-size);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: var(--hero-title-spacing);
+  text-align: left;
+  margin: 0 0 28px;
+}
+.illustration-section > h1 span,
+.illustration-section > h1 strong {
+  font: inherit;
+  letter-spacing: inherit;
+}
+.case-hero > .case-eyebrow,
+.about-page .about-intro > .about-eyebrow {
+  position: absolute;
+  top: calc(var(--hero-top) - 44px);
+  left: 0;
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.6;
+}
+.page_title {
+  height: auto;
+  min-height: 0;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0;
+}
+.page_title > h1 { text-align: center; }
+.page_title > p { width: 100%; max-width: 770px; text-align: left; margin: 0 auto; }
+.page_title > p + p { margin-top: 24px; }
+/* Visible artwork occupies approximately y=477–1554 of the 2048px canvas.
+   Keep a small safety margin for hair strokes; crop whitespace in layout only. */
+.home-illustration-crop {
+  position: relative;
+  width: 300px;
+  max-width: 60%;
+  aspect-ratio: 2048 / 1110;
+  overflow: hidden;
+  flex-shrink: 0;
+  margin: 0 auto 24px;
+}
+.home-illustration-crop > .image-223 {
+  position: absolute;
+  top: -41.441441%; /* 460 / 1110 */
+  left: 0;
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: auto;
+  margin: 0;
+}
+.illustration-section { gap: 32px; }
+.case-hero .flex-title-row { margin-bottom: 28px; }
+.case-hero .flex-title-row h1 { margin: 0; }
+@media (max-width: 991px) {
+  :root { --hero-top: 140px; }
+}
+@media (max-width: 767px) {
+  :root { --hero-top: 120px; }
+  .case-hero > .case-eyebrow,
+  .about-page .about-intro > .about-eyebrow { font-size: 10px; }
+}
