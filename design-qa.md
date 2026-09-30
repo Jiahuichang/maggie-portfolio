@@ -1,5 +1,30 @@
 # Design QA — Maggie Portfolio
 
+## Current iteration — Editorial About page (September 30, 2026)
+
+- Source visual truth: `/var/folders/v9/jqx1zb8n6t9fjftvz83wj54w0000gp/T/codex-clipboard-6a8a1691-ef90-44f9-8e50-591052095b1c.png`
+- Implementation: `about-mags.html` and the homepage teaser in `index.html`
+- Verified viewport: responsive mobile at 508 × 1005; the earlier 893 × 1005 browser evidence was also reviewed
+- State: default page load
+- HTTP verification: both pages return `200 OK` from the local preview
+- Primary interactions tested: mobile menu opens and closes; the current-page item remains aligned; homepage navigation returns to About
+- Console check: no errors or warnings
+- Implementation screenshot: captured in the in-app browser during the current task; the browser capture is not exposed as a persistent file path
+- Full-view comparison: the annotated About page and refreshed implementation were compared at the same responsive viewport
+- Focused-region comparison: hero copy, hero top alignment, mobile header rule, profile location, and expanded mobile menu were checked individually
+- Fonts and typography: the portfolio's existing Manrope stack is retained; the hero hierarchy and wrapping are readable at the verified viewport
+- Spacing and layout rhythm: the About title uses the shared `--hero-top`; the mobile header and menu align consistently with the other pages
+- Colors and visual tokens: the existing black/white palette and restrained borders are retained
+- Image quality and asset fidelity: opening portrait is intentionally reserved as a temporary placeholder at the user's request; existing personal images are retained below
+- Copy and content: existing career facts and selected-work links retained and rewritten into an editorial profile structure
+- Comparison history: removed the redundant profile kicker and masthead, replaced design-background-led copy, aligned the hero, fixed current-page mobile menu spacing, and added the shared mobile header rule; the refreshed browser evidence showed no remaining P0/P1/P2 issue in the annotated areas
+
+final result: passed
+
+---
+
+## Previous full-site QA
+
 Status: Passed for local review and handoff. Public deployment is not part of this delivery.
 
 ## Scope and source

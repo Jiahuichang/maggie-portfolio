@@ -474,7 +474,7 @@ body>main{
                                                                                                                                                                                                                                                                 .case-button{
                                                                                                                                                                                                                                                                   font-size:13px}
                                                                                                                                                                                                                                                                 }
-                                                                                                                                                                                                                                                                @media(prefers-reduced-motion:reduce){
+@media(prefers-reduced-motion:reduce){
                                                                                                                                                                                                                                                                   html{
                                                                                                                                                                                                                                                                     scroll-behavior:auto}
                                                                                                                                                                                                                                                                     *,*:before,*:after{
@@ -517,6 +517,25 @@ body>main{
   min-height: 280px; padding: 48px 28px; border: 1px dashed #a6b4aa;
   background: #f2f5ef; display: flex; flex-direction: column;
   align-items: center; justify-content: center; text-align: center; gap: 14px;
+}
+
+/* Keep the compact navigation consistent across every page. */
+@media(max-width:991px){
+  body .w-nav-menu.menu-open>a,
+  body .w-nav-menu.menu-open>a.w--current{
+    box-sizing:border-box;
+    display:block;
+    float:none;
+    width:100%;
+    margin:0;
+    padding:14px 0;
+    text-align:left;
+  }
+}
+@media(max-width:767px){
+  .navbar-5{
+    border-bottom:1px solid #d4d4d4;
+  }
 }
 .dealer-case .dealer-image-placeholder strong { font-size: 25px; line-height: 1.3; font-weight: 700; }
 .dealer-case .dealer-image-placeholder p { max-width: 470px; margin: 0; color: #596458; font-size: 15px; line-height: 1.6; }
@@ -713,8 +732,13 @@ b,strong{font-weight:800;}
 @media(max-width:767px){.flex-title-row{flex-direction:column;gap:24px;}.flex-app-badge{flex-basis:auto;align-self:flex-end;}}
 
 /* Mobile cards must contain both their cover and copy, without fixed row heights. */
+.side-projects-section { width:90%; max-width:1296px; margin:72px auto 0; padding:32px 0 64px; border-top:1px solid #333; }
+.side-projects-section h2 { margin:0; color:#171717; font-size:28px; line-height:1.3; font-weight:800; }
+.side-projects-preview { display:flex; flex-direction:column; align-items:center; gap:24px; padding-top:48px; }
+.side-projects-preview img { display:block; width:320px; max-width:80%; height:auto; }
+.side-projects-preview p { margin:0; padding:0; color:#171717; font-size:24px; line-height:1.4; font-weight:700; }
 @media (max-width: 991px) {
-  .pm-design-section { gap: 36px; }
+  .pm-design-section { display:flex; flex-direction:column; gap:36px; }
   .pm-design-section > .section-49,
   .pm-design-section > .section-50,
   .pm-design-section > .section-51 {
@@ -729,6 +753,9 @@ b,strong{font-weight:800;}
     gap: 36px;
     margin: 0;
   }
+  .pm-design-section .columns-33::before,
+  .pm-design-section .columns-33::after { display:none; }
+  .pm-design-section .w-layout-blockcontainer > :last-child { margin-bottom:0; }
   .pm-design-section .column-60,
   .pm-design-section .column-61 {
     float: none;

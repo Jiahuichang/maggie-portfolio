@@ -23,32 +23,51 @@
   <link href="assets/c40bc631bc196a74.css" rel="stylesheet" />
   <link href="portfolio.css?v=webp-covers-20260930" rel="stylesheet" />
   <style>
-    .about-page { max-width: 1120px; margin: 0 auto; padding: 72px 32px 80px; }
-    .about-page > section { width: 100%; max-width: none; margin: 0; padding: 28px 0; gap: 0; }
-    .about-page .about-intro { padding-top: 24px; }
-    .about-page h1 { font-size: clamp(36px, 5vw, 64px); line-height: 1.12; letter-spacing: -.035em; margin: 16px 0 28px; }
-    .about-page h2 { font-size: clamp(26px, 3vw, 36px); line-height: 1.25; margin: 0 0 20px; }
-    .about-page h3 { font-size: 20px; line-height: 1.4; margin: 12px 0; }
-    .about-page p { font-size: 17px; line-height: 1.75; max-width: 780px; margin: 0 0 20px; padding: 0; }
-    .about-page .about-eyebrow { font-size: 12px; letter-spacing: .14em; font-weight: 700; }
-    .about-page .about-lead { font-size: 23px; line-height: 1.6; }
-    .about-path, .about-traits { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; margin-top: 12px; }
-    .about-path > div, .about-traits > article { border-top: 1px solid #ccc; padding-top: 20px; }
-    .about-path span { font-size: 13px; color: #606060; }
-    .about-page .about-path p, .about-page .about-traits p { font-size: 16px; }
-    .about-traits a { color: inherit; text-decoration: underline; text-underline-offset: 4px; line-height: 1.6; }
-    .about-photo-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin-top: 12px; }
+    .about-page { max-width: 1180px; margin: 0 auto; padding: 64px 32px 88px; color: #171717; }
+    .about-page p { padding: 0; }
+    .about-story-header { padding: var(--hero-top) 0 28px; border-bottom: 1px solid #cfcfcf; }
+    .about-page h1 { max-width: 1020px; margin: 0 0 22px; font-size: var(--hero-title-size); line-height: 1.12; letter-spacing: var(--hero-title-spacing); }
+    .about-deck { max-width: 850px; margin: 0 0 28px; color: #383838; font-size: clamp(19px, 2.1vw, 26px); line-height: 1.48; }
+    .about-byline { display: flex; flex-wrap: wrap; gap: 8px 18px; margin: 0; color: #666; font-size: 13px; }
+    .about-byline strong { color: #171717; }
+    .about-hero-placeholder { display: grid; place-items: center; min-height: clamp(340px, 54vw, 650px); margin: 32px 0 10px; border: 1px solid #bcbcbc; background: #f0efe9; text-align: center; }
+    .about-hero-placeholder div { max-width: 310px; padding: 32px; }
+    .about-hero-placeholder strong { display: block; margin-bottom: 8px; font-size: 18px; }
+    .about-hero-placeholder span { color: #666; font-size: 14px; line-height: 1.6; }
+    .about-caption { margin: 0; color: #777; font-size: 12px; line-height: 1.5; }
+    .about-article { display: grid; grid-template-columns: minmax(0, 2.1fr) minmax(260px, .9fr); gap: clamp(48px, 8vw, 112px); padding-top: 56px; }
+    .about-copy { max-width: 740px; }
+    .about-copy p { margin: 0 0 24px; font-size: 18px; line-height: 1.82; }
+    .about-copy .about-lead::first-letter { float: left; margin: 8px 10px 0 0; font-size: 72px; font-weight: 700; line-height: .72; }
+    .about-copy h2 { margin: 56px 0 20px; font-size: clamp(28px, 3.2vw, 42px); line-height: 1.18; letter-spacing: -.035em; }
+    .about-pullquote { margin: 44px 0; padding: 24px 0; border-top: 3px solid #171717; border-bottom: 1px solid #171717; font-size: clamp(25px, 3vw, 38px); font-weight: 600; line-height: 1.3; letter-spacing: -.03em; }
+    .about-sidebar { align-self: start; }
+    .about-fact { padding: 18px 0 22px; border-top: 1px solid #bcbcbc; }
+    .about-fact:last-child { border-bottom: 1px solid #bcbcbc; }
+    .about-fact h3 { margin: 0 0 8px; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; }
+    .about-fact p, .about-fact a { margin: 0; color: #4f4f4f; font-size: 15px; line-height: 1.6; }
+    .about-fact a { color: #171717; text-decoration: underline; text-underline-offset: 4px; }
+    .about-timeline { margin: 32px 0 0; }
+    .about-timeline article { display: grid; grid-template-columns: 116px 1fr; gap: 20px; padding: 20px 0; border-top: 1px solid #d4d4d4; }
+    .about-timeline time { color: #666; font-size: 13px; }
+    .about-timeline h3 { margin: -4px 0 5px; font-size: 19px; }
+    .about-timeline p { margin: 0; font-size: 16px; line-height: 1.65; }
+    .about-life { margin-top: 64px; padding-top: 32px; border-top: 3px solid #171717; }
+    .about-section-label { margin: 0 0 24px; font-size: 13px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+    .about-photo-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
     .about-photo-grid figure { margin: 0; min-width: 0; }
-    .about-photo-grid img { display: block; width: 100%; height: auto; border-radius: 8px; }
-    .about-photo-grid figcaption { padding-top: 8px; }
-    .about-page .about-photo-grid h3 { font-size: 18px; }
-    .about-page .about-photo-grid p { font-size: 15px; margin-bottom: 0; }
+    .about-photo-grid img { display: block; width: 100%; height: auto; border-radius: 4px; }
+    .about-photo-grid figcaption { padding-top: 10px; }
+    .about-photo-grid h3 { margin: 0 0 6px; font-size: 18px; }
+    .about-photo-grid p { margin: 0; color: #555; font-size: 14px; line-height: 1.6; }
     @media (max-width: 767px) {
-      .about-page { padding: 32px 24px 48px; }
-      .about-page > section { padding: 24px 0; }
-      .about-path, .about-traits { grid-template-columns: 1fr; gap: 20px; }
+      .about-page { padding: 32px 24px 56px; }
+      .about-hero-placeholder { min-height: 360px; }
+      .about-article { grid-template-columns: 1fr; gap: 44px; padding-top: 40px; }
+      .about-copy p { font-size: 17px; }
+      .about-sidebar { order: -1; }
+      .about-timeline article { grid-template-columns: 1fr; gap: 6px; }
       .about-photo-grid { grid-template-columns: 1fr; gap: 32px; }
-      .about-page .about-lead { font-size: 20px; }
     }
   </style>
   <link href="hero.css?v=20260929" rel="stylesheet" />
@@ -116,33 +135,44 @@
     </div>
   </div>
   <main class="about-page" id="main-content">
-    <section class="section-39 about-intro" id="About-Section">
-      <p class="about-eyebrow">ABOUT MAGGIE</p>
-      <h1>Product thinking.<br />A designer’s perspective.</h1>
-      <p class="about-lead">Hi, I’m Maggie, you can also call me Jiahui 嘉惠. I’m a Product Manager with a background in product design.</p>
-      <p>I turn ambiguous needs and complex workflows into clear product decisions, helping teams build experiences they can deliver, measure, and improve.</p>
-    </section>
-    <section class="section-39-copy about-background" aria-labelledby="background-heading">
-      <h2 id="background-heading">From design to product ownership.</h2>
-      <p>My path from industrial design to Product Designer and then Product Manager has shaped how I work: I look closely at where people get stuck, then explore the systems, operational needs, and technical constraints behind the experience.</p>
-      <p>Across connected e-bike experiences and dealer service tools, I bring those perspectives together to help teams decide what matters, what to build first, and how to know whether it works.</p>
-      <div class="about-path" aria-label="Career journey">
-        <div><span>2012–2018</span><h3>Industrial Designer</h3><p>Understanding physical products and the realities of making them.</p></div>
-        <div><span>2018–2022</span><h3>Product Designer</h3><p>Connecting user needs with clear user flows and interactions.</p></div>
-        <div><span>2022–Present</span><h3>Product Manager</h3><p>Bringing product direction, team decisions, and delivery together.</p></div>
+    <article>
+      <header class="about-story-header">
+        <h1>A product manager who turns problems into solutions.</h1>
+        <p class="about-deck">I look closely at where people get stuck, make sense of the constraints, and help teams decide what to do next.</p>
+        <p class="about-byline"><strong>By Maggie Chang</strong><span>6 min read</span></p>
+      </header>
+      <figure>
+        <div class="about-hero-placeholder" role="img" aria-label="Portrait photograph placeholder for Maggie Chang">
+          <div><strong>Portrait coming soon</strong><span>This space is reserved for the opening photograph. The story can begin here without changing the layout later.</span></div>
+        </div>
+        <figcaption class="about-caption">Maggie Chang, Product Manager. Photograph to come.</figcaption>
+      </figure>
+      <div class="about-article">
+        <div class="about-copy">
+          <p class="about-lead">Hi, I’m Maggie. You can also call me Jiahui 嘉惠. I’m a Product Manager, and I’ve always been drawn to the moment when a fuzzy problem starts becoming something a team can see, discuss, and act on.</p>
+          <p>My path began in industrial design, moved through product design, and eventually grew into product ownership. Each chapter still shapes how I work today: I look closely at where people get stuck, then explore the systems, operational needs, and technical constraints behind the experience.</p>
+          <p class="about-pullquote">“Make the problem clear enough that the whole team can move.”</p>
+          <h2>From understanding the experience to shaping the decision.</h2>
+          <p>Across connected e-bike experiences and dealer service tools, I bring user needs, business context, and delivery realities together. I ask questions, map the experience, and make constraints visible so everyone can work from a shared understanding. On Flex, that meant deciding what belonged in the first release and what could wait.</p>
+          <p>I enjoy connecting perspectives across disciplines, weighing user value against dependencies and team capacity to find a practical way forward. And I care about what happens after launch: whether the product actually works in people’s hands, what the data tells us, and what deserves to improve next.</p>
+          <div class="about-timeline" aria-label="Career journey">
+            <article><time>2012 to 2018</time><div><h3>Industrial Designer</h3><p>Understanding physical products and the realities of making them.</p></div></article>
+            <article><time>2018 to 2022</time><div><h3>Product Designer</h3><p>Connecting user needs with clear user flows and interactions.</p></div></article>
+            <article><time>2022 to Present</time><div><h3>Product Manager</h3><p>Bringing product direction, team decisions, and delivery together.</p></div></article>
+          </div>
+        </div>
+        <aside class="about-sidebar" aria-label="Profile facts and selected work">
+          <div class="about-fact"><h3>Based in</h3><p>Taiwan · Open to opportunities worldwide</p></div>
+          <div class="about-fact"><h3>Known for</h3><p>Making complex product problems clear, testable, and shippable.</p></div>
+          <div class="about-fact"><h3>Working style</h3><p>Curious, collaborative, and persistent after launch.</p></div>
+          <div class="about-fact"><h3>Selected story</h3><a href="flex.html">How I focused the first Flex release →</a></div>
+          <div class="about-fact"><h3>Another case</h3><a href="claim-system.html">Clarifying the claim journey →</a></div>
+          <div class="about-fact"><h3>Off the record</h3><p>Cycling makes me feel both strong and relaxed. Hiking and travel keep me curious.</p></div>
+        </aside>
       </div>
-    </section>
-    <section class="section-39-copy about-working" aria-labelledby="working-heading">
-      <h2 id="working-heading">What it’s like to work with me.</h2>
-      <div class="about-traits">
-        <article><h3>I make the unclear discussable.</h3><p>I ask questions, map the experience, and make constraints visible so the team can work from a shared understanding.</p><a href="claim-system.html">See how I clarified the claim journey →</a></article>
-        <article><h3>I connect perspectives to decisions.</h3><p>I enjoy working across disciplines, weighing user value against dependencies and team capacity to find a practical way forward.</p><a href="flex.html">See how I focused the first Flex release →</a></article>
-        <article><h3>I follow through after launch.</h3><p>I care about whether the product works in people’s hands. I use feedback and data to follow up on decisions and guide improvements.</p><a href="hra.html">See how I helped improve rider reliability →</a></article>
-      </div>
-    </section>
-    <section class="section-56 about-life" aria-labelledby="life-heading">
-      <h2 id="life-heading">Outside of work.</h2>
-      <p>Cycling helps me feel both strong and relaxed. Away from the bike, I enjoy hiking and traveling — sometimes with friends, sometimes on my own.</p>
+    </article>
+    <section class="about-life" aria-labelledby="life-heading">
+      <p class="about-section-label" id="life-heading">Elsewhere in Maggie’s world</p>
       <div class="about-photo-grid">
         <figure>
           <img alt="A group of cyclists posing with their bikes during a ride." loading="lazy" width="1967" height="1476"
@@ -156,7 +186,7 @@
             sizes="(max-width: 767px) calc(100vw - 48px), (max-width: 1120px) calc((100vw - 112px) / 3), 336px"
             src="assets/bcae92c932400beb.webp"
             srcset="assets/07302c2b7a808337.webp 500w, assets/40e9c9ed3f70492f.webp 800w, assets/ff3515b4b484091e.webp 1080w, assets/e7202dddb6f5afec.webp 1600w, assets/bcae92c932400beb.webp 1834w" />
-          <figcaption><h3>A little further outdoors</h3><p>I also enjoy hiking — a different pace and a chance to spend time outside with friends.</p></figcaption>
+          <figcaption><h3>A little further outdoors</h3><p>I also enjoy hiking. It offers a different pace and a chance to spend time outside with friends.</p></figcaption>
         </figure>
         <figure>
           <img alt="A travel selfie with two people smiling in a shop." loading="lazy" width="1600" height="1200"
