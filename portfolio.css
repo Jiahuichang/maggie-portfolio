@@ -573,8 +573,8 @@ body>main{
   .dealer-case .dealer-image-placeholder strong { font-size: 21px; }
 }
 /* Keep the homepage Claim card aligned with the case-study cover. */
-.work_claim-web { background-image:url("assets/claim-workshop-cover-v2.webp"); }
-.work_claim-web:hover { background-image:linear-gradient(#000c,#000c),url("assets/claim-workshop-cover-v2.webp"); }
+.work_claim-web { background-image:url("assets/cards/claim.webp"); }
+.work_claim-web:hover { background-image:linear-gradient(#000c,#000c),url("assets/cards/claim.webp"); }
 /* HRA case study: shared Flex structure with evidence and platform results. */
 /* Source-based visual explanations, scoped to HRA. */
 .hra-case .hra-visual { margin:36px 0; padding:28px; background:#f0f3ed; border:1px solid #d6dfd1; border-radius:12px; }
@@ -672,49 +672,49 @@ body>main{
   font-style: normal;
   font-weight: 200;
   font-display: swap;
-  src: url(assets/fonts/manrope-200.ttf) format('truetype');
+  src: url(assets/fonts/manrope-200.woff2) format('woff2'), url(assets/fonts/manrope-200.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Manrope';
   font-style: normal;
   font-weight: 300;
   font-display: swap;
-  src: url(assets/fonts/manrope-300.ttf) format('truetype');
+  src: url(assets/fonts/manrope-300.woff2) format('woff2'), url(assets/fonts/manrope-300.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Manrope';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(assets/fonts/manrope-400.ttf) format('truetype');
+  src: url(assets/fonts/manrope-400.woff2) format('woff2'), url(assets/fonts/manrope-400.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Manrope';
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url(assets/fonts/manrope-500.ttf) format('truetype');
+  src: url(assets/fonts/manrope-500.woff2) format('woff2'), url(assets/fonts/manrope-500.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Manrope';
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url(assets/fonts/manrope-600.ttf) format('truetype');
+  src: url(assets/fonts/manrope-600.woff2) format('woff2'), url(assets/fonts/manrope-600.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Manrope';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url(assets/fonts/manrope-700.ttf) format('truetype');
+  src: url(assets/fonts/manrope-700.woff2) format('woff2'), url(assets/fonts/manrope-700.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Manrope';
   font-style: normal;
   font-weight: 800;
   font-display: swap;
-  src: url(assets/fonts/manrope-800.ttf) format('truetype');
+  src: url(assets/fonts/manrope-800.woff2) format('woff2'), url(assets/fonts/manrope-800.ttf) format('truetype');
 }
 
 body, body *:not([class*="w-icon-"]):not([class*="icon-logged"]){font-family:Manrope,Arial,sans-serif !important;}
@@ -901,5 +901,5 @@ b,strong{font-weight:800;}
 }
 
 /* Factory card: a 1600px WebP is plenty for the card and lighter than the full-size conversion. */
-.work_fts { background-image: url("assets/factory-card-cover.webp"); }
-.work_fts:hover { background-image: linear-gradient(#000c,#000c), url("assets/factory-card-cover.webp"); }
+.work_fts { background-image: url("assets/cards/fts.webp"); }
+.work_fts:hover { background-image: linear-gradient(#000c,#000c), url("assets/cards/fts.webp"); }
