@@ -1,2 +1,0 @@
-Sticky notes removed using built-in image_gen, with prompt: Remove all four colored sticky notes; reconstruct lower monitor bezel, stand and desktop; preserve all other scene elements.
-Screen then composited deterministically from the user-provided diagnostic-summary screenshot with a perspective transform and subtle warm luminance adjustment. No generated screen lettering. Final output is lossless WebP at 3168 x 1986.
