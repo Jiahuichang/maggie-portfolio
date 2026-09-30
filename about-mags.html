@@ -25,7 +25,7 @@
   <style>
     .about-page { max-width: 1180px; margin: 0 auto; padding: 64px 32px 88px; color: #171717; }
     .about-page p { padding: 0; }
-    .about-story-header { padding: var(--hero-top) 0 28px; border-bottom: 1px solid #cfcfcf; }
+    .about-story-header { padding: var(--hero-top) 0 28px; border-bottom: 3px solid #171717; }
     .about-page h1 { max-width: 1020px; margin: 0 0 22px; font-size: var(--hero-title-size); line-height: 1.12; letter-spacing: var(--hero-title-spacing); }
     .about-deck { max-width: 850px; margin: 0 0 28px; color: #383838; font-size: clamp(19px, 2.1vw, 26px); line-height: 1.48; }
     .about-byline { display: flex; flex-wrap: wrap; gap: 8px 18px; margin: 0; color: #666; font-size: 13px; }
@@ -37,7 +37,7 @@
     .about-copy p { margin: 0 0 24px; font-size: 18px; line-height: 1.82; }
     .about-copy .about-lead::first-letter { float: left; margin: 8px 10px 0 0; font-size: 72px; font-weight: 700; line-height: .72; }
     .about-copy h2 { margin: 56px 0 20px; font-size: clamp(28px, 3.2vw, 42px); line-height: 1.18; letter-spacing: -.035em; }
-    .about-pullquote { margin: 44px 0; padding: 24px 0; border-top: 3px solid #171717; border-bottom: 1px solid #171717; font-size: clamp(25px, 3vw, 38px); font-weight: 600; line-height: 1.3; letter-spacing: -.03em; }
+    .about-pullquote { margin: 44px 0; padding: 24px 0; border-top: 3px solid #171717; border-bottom: 3px solid #171717; font-size: clamp(25px, 3vw, 38px); font-weight: 600; line-height: 1.3; letter-spacing: -.03em; }
     .about-sidebar { align-self: start; }
     .about-fact { padding: 18px 0 22px; border-top: 1px solid #bcbcbc; }
     .about-fact:last-child { border-bottom: 1px solid #bcbcbc; }
@@ -49,6 +49,18 @@
     .about-timeline time { color: #666; font-size: 13px; }
     .about-timeline h3 { margin: -4px 0 5px; font-size: 19px; }
     .about-timeline p { margin: 0; font-size: 16px; line-height: 1.65; }
+    /* A quiet visual footnote to the career story. */
+    .about-archive { margin-top: 48px; padding-top: 24px; border-top: 3px solid #171717; }
+    .about-archive > h2 { margin: 0 0 20px; color: #666; font-size: 12px; line-height: 1.5; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; }
+    .about-archive-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+    .about-archive figure { margin: 0; min-width: 0; }
+    .about-archive-photos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; background: #f4f4f2; }
+    .about-archive-photos img { display: block; width: 100%; height: 180px; object-fit: contain; }
+    .about-archive figcaption { margin-top: 12px; color: #555; font-size: 14px; line-height: 1.5; }
+    @media (max-width: 767px) {
+      .about-archive-grid { grid-template-columns: 1fr; gap: 24px; }
+      .about-archive-photos img { height: 170px; }
+    }
     .about-life { margin-top: 64px; padding-top: 32px; border-top: 3px solid #171717; }
     .about-section-label { margin: 0 0 24px; font-size: 13px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
     .about-photo-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 40px; }
@@ -80,6 +92,7 @@
     }
   </style>
   <link href="hero.css?v=20260929" rel="stylesheet" />
+  <link href="about-gallery.css?v=20261001" rel="stylesheet" />
   <style>
     /* Use paragraph margins once, without the legacy section flex gaps. */
     .about-page { padding-bottom: 16px; }
@@ -184,6 +197,38 @@
         </aside>
       </div>
     </article>
+    <section class="about-archive" aria-labelledby="archive-heading">
+      <h2 id="archive-heading">Earlier industrial design</h2>
+      <div class="about-archive-grid">
+        <figure>
+          <button class="about-archive-trigger" type="button" data-gallery="panda" aria-label="View Panda Mama Screwdriver images" aria-expanded="false" aria-controls="archive-preview">
+            <span class="about-archive-photos">
+            <img src="assets/about/industrial/panda-use.webp" alt="Panda Mama screwdriver in use." width="800" height="522" loading="lazy" decoding="async" />
+            <img src="assets/about/industrial/panda-parts.webp" alt="Panda Mama with the screwdriver and stored bits separated." width="800" height="522" loading="lazy" decoding="async" />
+            </span>
+          </button>
+          <figcaption>Panda Mama Screwdriver</figcaption>
+        </figure>
+        <figure>
+          <button class="about-archive-trigger" type="button" data-gallery="taivaun" aria-label="View Taivaun Screwdriver Set images" aria-expanded="false" aria-controls="archive-preview">
+            <span class="about-archive-photos">
+            <img src="assets/about/industrial/taivaun-parts.webp" alt="Taivaun mountain-shaped tool set with its screwdriver bits." width="800" height="534" loading="lazy" decoding="async" />
+            <img src="assets/about/industrial/taivaun-storage.webp" alt="Taivaun mountain opened to show bit storage." width="800" height="534" loading="lazy" decoding="async" />
+            </span>
+          </button>
+          <figcaption>Taivaun Screwdriver Set</figcaption>
+        </figure>
+        <figure>
+          <button class="about-archive-trigger" type="button" data-gallery="bandy" aria-label="View Bandy Tape Measure images" aria-expanded="false" aria-controls="archive-preview">
+            <span class="about-archive-photos">
+            <img src="assets/about/industrial/bandy-measure.webp" alt="Bandy bear-shaped tape measure with its tape extended." width="477" height="800" loading="lazy" decoding="async" />
+            <img src="assets/about/industrial/bandy-keyring.webp" alt="Bandy tape measure used as a keyring." width="640" height="400" loading="lazy" decoding="async" />
+            </span>
+          </button>
+          <figcaption>Bandy Tape Measure</figcaption>
+        </figure>
+      </div>
+    </section>
     <section class="about-life" aria-labelledby="life-heading">
       <p class="about-section-label" id="life-heading">Elsewhere in Maggie’s world</p>
       <div class="about-photo-grid">
@@ -239,6 +284,14 @@
       </div>
     </div>
   </div>
+  <aside class="archive-preview" id="archive-preview" aria-labelledby="archive-preview-title" hidden>
+    <div class="archive-preview-header">
+      <h2 id="archive-preview-title"></h2>
+      <button class="archive-preview-close" type="button" aria-label="Close product images">×</button>
+    </div>
+    <div class="archive-preview-grid"></div>
+  </aside>
+  <script defer src="about-gallery.js?v=20261001"></script>
   <script defer="" src="site.js?v=20260928-images">
   </script>
 </body>
