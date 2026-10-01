@@ -10,12 +10,62 @@
 
 
 /* Original transparent artwork forms each badge face and its dimensional metal edge. */
-.badge-gallery{margin:36px 0 20px;padding:32px;background:radial-gradient(ellipse at 50% 0%,#35393f,#13161a 65%);border-radius:4px;color:#fff;overflow:hidden;}
-.badge-gallery-top{display:flex;justify-content:space-between;align-items:center;gap:20px;}.badge-gallery-top p{margin:0;color:#d7dbe0;}.badge-motion-toggle{background:transparent;color:#e3e5e8;border:1px solid #737980;border-radius:30px;padding:9px 16px;font-size:12px;cursor:pointer;}.badge-motion-toggle:focus-visible{outline:3px solid #f4d395;outline-offset:4px;}
-.badge-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px 28px;padding:28px 0;}.badge-item{margin:0;perspective:800px;text-align:center;}.badge-object{position:relative;width:100%;aspect-ratio:1;transform-style:preserve-3d;transform:rotateX(8deg) rotateY(-18deg);filter:drop-shadow(10px 18px 10px #0008);animation:badge-turn 9s ease-in-out infinite;animation-delay:var(--delay);}.badge-object img{position:absolute;inset:0;width:100%;height:auto;transform:translateZ(7px);filter:contrast(1.08) saturate(.88);}.badge-metal,.badge-glint{position:absolute;inset:0;mask-image:var(--badge);-webkit-mask-image:var(--badge);mask-size:contain;-webkit-mask-size:contain;mask-repeat:no-repeat;-webkit-mask-repeat:no-repeat;}.badge-depth{background:linear-gradient(125deg,#e5d8b7 4%,#6b6049 14%,#25272b 30%,#f5e0ac 45%,#5d5547 62%,#25272b 76%,#bfb6a0 88%);transform:translate3d(7px,6px,-5px) scale(1.025);}.badge-edge{background:linear-gradient(120deg,#fff5d6,#80725b 20%,#eee7d9 36%,#655d4d 55%,#fff6d5 69%,#a59a82 86%);transform:translateZ(2px) scale(1.018);}.badge-glint{background:linear-gradient(115deg,transparent 15%,#ffefd855 27%,transparent 37%,transparent 50%,#fff9df99 55%,transparent 61%);background-size:260% 100%;mix-blend-mode:soft-light;transform:translateZ(8px);animation:badge-shine 9s ease-in-out infinite;animation-delay:var(--delay);pointer-events:none;}.badge-item figcaption{font-size:12px;line-height:1.6;color:#d1d5dc;margin-top:12px;}.badge-gallery-caption{font-size:12px;line-height:1.6;color:#b9c0c8;margin:12px 0 0;text-align:center;}
-@keyframes badge-turn{0%,100%{transform:rotateX(8deg) rotateY(-23deg) rotateZ(-5deg)}50%{transform:rotateX(-6deg) rotateY(23deg) rotateZ(5deg)}}
-@keyframes badge-shine{0%,100%{background-position:100% 50%}50%{background-position:0% 50%}}
-.badge-gallery[data-motion="paused"] .badge-object,.badge-gallery[data-motion="paused"] .badge-glint{animation-play-state:paused;}
+.badge-gallery{margin:36px 0 20px;padding:16px 20px;background:transparent;overflow:visible;}
+.badge-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px 28px;padding:28px 0;}.badge-item{margin:0;perspective:800px;text-align:center;}.badge-object{position:relative;width:100%;aspect-ratio:1;transform-style:preserve-3d;transform:rotateX(8deg) rotateY(-18deg);filter:drop-shadow(6px 12px 8px #0003);}.badge-object img{position:absolute;inset:0;width:100%;height:auto;transform:translateZ(7px);filter:contrast(1.08) saturate(.88);}.badge-metal,.badge-glint{position:absolute;inset:0;mask-image:var(--badge);-webkit-mask-image:var(--badge);mask-size:contain;-webkit-mask-size:contain;mask-repeat:no-repeat;-webkit-mask-repeat:no-repeat;}.badge-depth{background:linear-gradient(125deg,#e5d8b7 4%,#6b6049 14%,#25272b 30%,#f5e0ac 45%,#5d5547 62%,#25272b 76%,#bfb6a0 88%);transform:translate3d(7px,6px,-5px) scale(1.025);}.badge-edge{background:linear-gradient(120deg,#fff5d6,#80725b 20%,#eee7d9 36%,#655d4d 55%,#fff6d5 69%,#a59a82 86%);transform:translateZ(2px) scale(1.018);}.badge-glint{background:linear-gradient(115deg,transparent 15%,#ffefd855 27%,transparent 37%,transparent 50%,#fff9df99 55%,transparent 61%);background-size:260% 100%;mix-blend-mode:soft-light;transform:translateZ(8px);pointer-events:none;}.badge-item figcaption{font-size:12px;line-height:1.6;color:#60645f;margin-top:12px;}
 .leaderboard-gallery{display:grid;grid-template-columns:1fr 1fr;gap:36px;padding:40px;margin:36px 0;background:#eef0f5;border-radius:4px;}.leaderboard-gallery figure{margin:0;}.leaderboard-gallery img{display:block;width:100%;max-width:300px;height:auto;margin:auto;border-radius:24px;box-shadow:0 14px 28px #22233024;}.leaderboard-gallery figcaption{font-size:12px;line-height:1.6;text-align:center;color:#555c54;margin:20px auto 0;max-width:300px;}
-@media(max-width:767px){.badge-gallery{padding:24px 16px;}.badge-gallery-top{align-items:flex-start;}.badge-gallery-top .case-eyebrow{font-size:10px;max-width:150px;}.badge-motion-toggle{flex-shrink:0;}.badge-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 12px;}.leaderboard-gallery{padding:24px 16px;gap:24px;grid-template-columns:1fr;}.leaderboard-gallery img{max-width:280px;}}
+@media(max-width:767px){.badge-gallery{padding:12px 16px;}.badge-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 12px;}.leaderboard-gallery{padding:24px 16px;gap:24px;grid-template-columns:1fr;}.leaderboard-gallery img{max-width:280px;}}
 @media(prefers-reduced-motion:reduce){.badge-object,.badge-glint{animation:none;}.badge-object{transform:none;}}
+
+/* Allow badge motion across the page; only the viewport clips horizontal overflow. */
+body.garden-page{overflow-x:clip;}
+
+/* Touch and keyboard operable planting prototype. */
+.plant-demo{position:relative;width:100%;max-width:320px;margin:auto;aspect-ratio:780/1688;border-radius:26px;overflow:hidden;isolation:isolate;box-shadow:0 16px 32px #263a2420;container-type:inline-size;background:#e4e8e5;}
+.garden-phone .plant-map{width:100%;max-width:none;height:100%;border-radius:0;box-shadow:none;}
+.plant-demo button{font:inherit;cursor:pointer;-webkit-tap-highlight-color:transparent;}
+.plant-demo button:focus-visible,.plant-reset:focus-visible{outline:3px solid #287dc0;outline-offset:3px;}
+.plant-demo [hidden]{display:none!important;}
+.plant-resources{position:absolute;right:3%;top:16.5%;display:flex;gap:2cqw;align-items:center;background:#d7dad5;color:#171d19;font-size:4cqw;font-weight:800;}
+.plant-resources span:last-child{color:#639d45;}
+.plant-marker{position:absolute;width:13%;aspect-ratio:1;border:0;border-radius:50%;background:#fff;box-shadow:0 2px 4px #0003;padding:0;display:grid;place-items:center;}
+.plant-marker[aria-pressed="true"]{background:#181d19;}
+.plant-face{font-size:8cqw;line-height:1;}
+.plant-one{left:17.7%;top:33.5%;border:3px solid #469bd2;}.plant-two{left:76.8%;top:33.5%;}.plant-three{left:15%;top:55%;}
+.plant-action{position:absolute;width:19%;aspect-ratio:1;border:0;padding:0;background:none;z-index:2;}
+.water-action{left:14.7%;top:26.7%;}.harvest-action{left:12%;top:48.4%;}
+.garden-phone .plant-action img{width:100%;height:100%;border-radius:0;box-shadow:none;object-fit:contain;animation:resource-breathe 1s ease-in-out infinite alternate;position:relative;z-index:1;}
+.asset-fallback{position:absolute;inset:0;border-radius:50%;display:grid;place-items:center;font-size:10cqw;background:#d1e1ed;border:2px solid #fff;}.harvest-action .asset-fallback{background:#87b957;color:#d2ef91;}
+.plant-feedback{position:absolute;z-index:6;font-size:5cqw;font-weight:900;line-height:1.2;color:#479bd1;text-shadow:1px 1px white,-1px -1px white,0 2px 4px #0004;opacity:0;pointer-events:none;}.watered-feedback{left:13%;top:39%;}.reward-feedback{left:16%;top:49%;color:#639c39;}.plant-feedback.visible{animation:plant-message 1.8s ease-out both;}
+.water-particles{position:absolute;left:20%;top:31%;width:9%;height:8%;pointer-events:none;display:none;z-index:5;}.is-watering .water-particles{display:block;}.water-particles i{position:absolute;left:45%;top:0;width:12%;height:18%;border-radius:60% 40% 60% 40%;background:#479bd1;animation:watering-drops .55s ease-in infinite;}.water-particles i:nth-child(2){left:10%;animation-delay:.1s}.water-particles i:nth-child(3){left:75%;animation-delay:.2s}.water-particles i:nth-child(4){left:25%;animation-delay:.3s}.water-particles i:nth-child(5){left:60%;animation-delay:.4s}
+.plant-card{position:absolute;z-index:7;left:7%;right:7%;bottom:2%;border-radius:14px;overflow:hidden;background:#f7f9fa;box-shadow:0 4px 16px #0004;text-align:left;}.plant-card-art{position:relative;background:#649b4b;height:35cqw;overflow:hidden;}.plant-card-art:after{content:'';position:absolute;bottom:0;width:100%;height:7cqw;background:#574640;border-radius:45% 45% 0 0;}.plant-stage{position:absolute;left:4%;top:10%;font-size:3.4cqw;color:white;border-radius:20px;padding:2px 6px;background:#ffffff30;}.plant-card-character{position:absolute;left:30%;bottom:0;font-size:25cqw;line-height:1;}.plant-close{position:absolute;right:4%;top:10%;border:0;border-radius:50%;width:10cqw;height:10cqw;background:#fff;font-size:6cqw!important;color:#222;}.plant-card-info{padding:4cqw;font-size:3.6cqw;line-height:1.5;}.plant-card-info p{font-size:3.4cqw!important;line-height:1.5!important;margin:1cqw 0!important;}.plant-card-reward{float:right;color:#639b47;}.plant-card-action{margin-top:2cqw;border:0;background:#639b47;color:white;border-radius:5px;padding:3cqw 5cqw;font-size:3.7cqw!important;font-weight:700!important;}.plant-card-action:disabled{background:#879292;cursor:default;}
+.plant-reset{display:block;margin:12px auto 0;background:transparent;border:0;border-bottom:1px solid #7b8d70;color:#486936;font:inherit;font-size:13px;cursor:pointer;padding:4px;}.plant-live{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);}
+@keyframes resource-breathe{from{transform:scaleX(1)}to{transform:scaleX(.83)}}
+@keyframes watering-drops{from{transform:translateY(0);opacity:1}to{transform:translateY(12cqw);opacity:0}}
+@keyframes plant-message{0%{opacity:0;transform:translateY(8px)}15%,75%{opacity:1}100%{opacity:0;transform:translateY(-12px)}}
+@media(prefers-reduced-motion:reduce){.garden-phone .plant-action img{animation:none}.water-particles i{animation:none}.plant-feedback.visible{animation:none;opacity:1}}
+/* Original supplied app artwork. */
+.plant-resources{background:#ffffffbb;border-radius:16px;padding:1cqw 2cqw;}
+.plant-marker{background:transparent;box-shadow:none;border:0;}
+.plant-face{display:block;width:100%;height:100%;}
+.garden-phone .plant-face img{width:100%;height:100%;max-width:none;border-radius:0;box-shadow:none;}
+.plant-marker[aria-pressed="true"]{background:#181d19;}
+.plant-marker[aria-pressed="true"] .plant-face{background:url('assets/ride-and-grow/planting-screen.webp') 87.72% 35.43% / 812.5% 1758.33%;border-radius:50%;}
+.plant-marker[aria-pressed="true"] .plant-face img{visibility:hidden;}
+.plant-card-art{background:#639b49 url('assets/ride-and-grow/planting-screen.webp') 50% 70% / 118% auto;}
+.plant-card-art:after{display:none;}
+.plant-card-character{display:none;}
+.plant-card[data-grown="true"] .plant-card-character{display:block;left:31%;bottom:3%;width:38%;height:85%;background:url('assets/ride-and-grow/plant-grown.png') center/contain no-repeat;}
+.plant-feedback.watered-feedback{width:24%;height:5%;font-size:0;background:url('assets/ride-and-grow/watered.png') center/contain no-repeat;}
+.garden-phone .plant-action img{animation:resource-breathe 1s ease-in-out infinite alternate;}
+@media(min-width:768px){.garden-spotlight{grid-template-columns:minmax(250px,1.1fr) minmax(0,1fr);padding:36px 20px;gap:28px;}}
+@media(prefers-reduced-motion:reduce){.garden-phone .plant-action img{animation:none;}}
+.plant-card-art{height:auto;aspect-ratio:652/300;background-size:119.632% 562.667%;background-position:50% 68.876%;}
+.plant-stage{left:4.9%;top:10.67%;width:28%;height:19%;box-sizing:border-box;background:#7aaa5e;display:flex;align-items:center;justify-content:center;padding:0;font-size:3.6cqw;}
+.plant-close{right:4.9%;top:10.67%;width:11.05%;height:auto;aspect-ratio:1;font-size:6cqw!important;display:grid;place-items:center;padding:0;}
+.plant-card[data-grown="true"] .plant-card-art{background:#639b49;}
+.plant-marker:after{content:'';position:absolute;inset:-6px;border-radius:50%;}
+@keyframes water-frames{0%,100%{content:url('assets/ride-and-grow/water-bubble.png')}50%{content:url('assets/ride-and-grow/water-bubble-alt.png')}}
+@keyframes coin-frames{0%,100%{content:url('assets/ride-and-grow/coin-bubble.png')}50%{content:url('assets/ride-and-grow/coin-bubble-alt.png')}}
+.garden-phone .water-action img{animation:water-frames 2s steps(1,end) infinite;}
+.garden-phone .harvest-action img{animation:coin-frames 2s steps(1,end) infinite;}
+@media(prefers-reduced-motion:reduce){.garden-phone .plant-action img{animation:none;}}
