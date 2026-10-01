@@ -25,8 +25,10 @@ body.garden-page{overflow-x:clip;}
 .plant-demo button{font:inherit;cursor:pointer;-webkit-tap-highlight-color:transparent;}
 .plant-demo button:focus-visible,.plant-reset:focus-visible{outline:3px solid #287dc0;outline-offset:3px;}
 .plant-demo [hidden]{display:none!important;}
-.plant-resources{position:absolute;right:3%;top:16.5%;display:flex;gap:2cqw;align-items:center;background:#d7dad5;color:#171d19;font-size:4cqw;font-weight:800;}
-.plant-resources span:last-child{color:#639d45;}
+.plant-resources{position:absolute;right:4.1%;top:16.6%;display:flex;gap:2.05cqw;align-items:center;color:#171d19;font-size:3.6cqw;font-weight:800;line-height:1;}
+.plant-resources span{display:flex;align-items:center;gap:1.03cqw;}
+.garden-phone .plant-resources img{display:block;width:auto;height:6.15cqw;max-width:none;margin:0;border-radius:0;box-shadow:none;}
+
 .plant-marker{position:absolute;width:13%;aspect-ratio:1;border:0;border-radius:50%;background:#fff;box-shadow:0 2px 4px #0003;padding:0;display:grid;place-items:center;}
 .plant-marker[aria-pressed="true"]{background:#181d19;}
 .plant-face{font-size:8cqw;line-height:1;}
@@ -44,7 +46,7 @@ body.garden-page{overflow-x:clip;}
 @keyframes plant-message{0%{opacity:0;transform:translateY(8px)}15%,75%{opacity:1}100%{opacity:0;transform:translateY(-12px)}}
 @media(prefers-reduced-motion:reduce){.garden-phone .plant-action img{animation:none}.water-particles i{animation:none}.plant-feedback.visible{animation:none;opacity:1}}
 /* Original supplied app artwork. */
-.plant-resources{background:#ffffffbb;border-radius:16px;padding:1cqw 2cqw;}
+
 .plant-marker{background:transparent;box-shadow:none;border:0;}
 .plant-face{display:block;width:100%;height:100%;}
 .garden-phone .plant-face img{width:100%;height:100%;max-width:none;border-radius:0;box-shadow:none;}
