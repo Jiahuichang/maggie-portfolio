@@ -622,7 +622,13 @@ body>main{
 .hra-scale strong,.hra-scale span,.hra-impact-grid span,.hra-impact-grid strong,.hra-impact-grid small { display:block; }
 .hra-scale strong { font-size:36px; line-height:1.3; color:#345b43; }
 .hra-scale span { margin-top:8px; color:#596458; }
-.hra-downloads { display:flex; flex-wrap:wrap; gap:16px; margin-top:28px; }
+.hra-title-row { display:flex; justify-content:space-between; align-items:flex-start; gap:32px; margin-bottom:28px; }
+.hra-case .hra-title-row h1 { flex:1; min-width:0; margin:0; }
+.hra-downloads { display:flex; flex-direction:column; align-items:flex-end; flex-shrink:0; gap:16px; }
+@media(max-width:767px) {
+ .hra-title-row { flex-direction:column; gap:24px; }
+ .hra-downloads { align-self:flex-end; flex-direction:row; flex-wrap:wrap; justify-content:flex-end; }
+}
 .hra-store-badge { display:inline-flex; align-items:center; }
 .hra-store-badge img { display:block; height:48px; width:auto; }
 .hra-case .hra-loop { grid-template-columns:repeat(3,minmax(0,1fr)); }
