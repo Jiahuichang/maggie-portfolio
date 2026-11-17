@@ -910,3 +910,8 @@ b,strong{font-weight:800;}
 /* Factory card: a 1600px WebP is plenty for the card and lighter than the full-size conversion. */
 .work_fts { background-image: url("assets/cards/fts.webp"); }
 .work_fts:hover { background-image: linear-gradient(#000c,#000c), url("assets/cards/fts.webp"); }
+
+/* Flex: three stages in the ride-to-tree product loop. */
+@media (min-width: 992px) {
+  .flex-case .flex-core-loop { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
